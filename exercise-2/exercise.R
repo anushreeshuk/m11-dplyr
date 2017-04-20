@@ -23,7 +23,7 @@ View(vehicles)
 
 # Create a data.frame of vehicles from 1997
 
-vehicles.new.1997 <- select(vehicles, year == 1997)
+vehicles.new.1997 <- filter(vehicles, year == 1997)
 
 vehicles.new.1997
 

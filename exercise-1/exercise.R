@@ -51,3 +51,30 @@ MakeYearFilt
 # What was the most efficient honda model of 1995?
 
 
+data("USPersonalExpenditure")
+
+View(USPersonalExpenditure)
+
+us.exp <- data.frame(USPersonalExpenditure)
+
+# What are the column names of your dataframe?
+colnames(us.exp)
+
+# Why are they so strange?
+
+# What are the row names of your dataframe?
+rownames(us.exp)
+
+# Create a column "category" that is equal to your rownames
+us.exp$category <- rownames(us.exp)
+
+# How much money was spent on personal care in 1940?
+care.1940 <- us.exp['Personal Care', 'X1940']
+
+# How much money was spent on Food and Tobacco in 1960
+food.1960 <- us.exp['Food and Tobacco', 'X1960']
+
+# What was the highest expenditure category in 1960?
+highest.1960 <- us.exp$category[us.exp$X1960 == max(us.exp$X1960)]
+
+View(us.exp)
